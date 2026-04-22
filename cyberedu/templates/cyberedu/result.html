@@ -1,0 +1,38 @@
+<!Doctype html>
+<html>
+<head> <title>QUIZ RESULTS</title>
+</head>
+<body> 
+    <h1> {{ topic.title }} Results </h1>
+    <h2>Score: {{ score }} / {{total}} </h2>
+<hr>
+{% for item in results %}
+<h3> {{ item.question.text }}</h3>
+
+{% for item in results %}
+    <h3> {{ item.question.text }}</h3>
+    {% if item.is_correct %}
+        <p style = 'color:green;'>Correct </p>
+    {% else %}
+        <p style = "color:red;">Wrong</p>
+    {% endif %}
+
+<p>Your Answer: {{ item.selected.text }}</p>
+<p>Correct Answer: {{ item.correct.text }}</p>
+
+<hr>
+    {% endfor %}
+{% endfor %}
+
+
+<br>
+<a href = "/"> Back To Topics</a>
+
+</body>
+
+
+
+
+
+
+</html>

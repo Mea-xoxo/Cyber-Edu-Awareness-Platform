@@ -1,0 +1,25 @@
+<!Doctype html>
+<html>
+<head>
+    <title>{{topic.title}} Quiz</title>
+</head>
+
+<body>
+<h1>{{topic.title}} Quiz</h1>
+<div class = "container">
+    <form method = "POST">
+        {% csrf_token %}
+        {% for question in questions %}
+            <h3>{{question.text }}</h3>
+            {% for choice in question.choice_set.all %}
+                <input type = "radio" name = "question_{{question.id}}" value = "{{choice.id}}">
+                    {{choice.text}} <br>
+
+            {% endfor %}
+        {% endfor %}
+    </div>
+    <br>
+        <button type = "submit">Submit</button>
+    </form>    
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+
+        <title>Cyber Security Awareness Platform</title>
+        <link rel = 'stylesheet' href = "{% static 'cyberedu/style.css' %}">
+</head>
+
+<body class = "home">
+    <div class = "logo"> 🔐 CyberEdu</div><br>
+
+<div class = "container">
+    <div class = "nav-left">
+    <div class = "nav-links">
+      <a href = "#">Home</a> 
+      
+      <div class = "dropdown">
+    <a href = "#" class = "dropbtn">Topics</a>
+    <div class ="dropdown-content">
+        {% for topic in topics %}
+            <a href="{% url 'topic_detail' topic.id %}">
+                {{ topic.title }}
+                    </a>
+        {% endfor %}
+        
+    </div>
+    
+    </div>
+<div>
+        <a href = "#">About</a>
+
+    
+    </div>
+</div>
+
+</div>
+<div class ="search">
+<form method = "GET" action = "{% url 'search' %}" class = "search">
+    <input class = 'srch' type = 'search' id = 'searchInput' name = 'q' placeholder = "Search Topics">
+    <button class = "btn" type = 'submit'>Search </button>
+    <div id = "searchResults" class = 'search-dropdown'></div>
+
+</form>
+</div>
+</div> 
+<br>
+
+<div class = "hero">
+<h1>Learn Easy CyberSecurity</h1>
+ <p style = "text-align:center; color = #fafcff">
+    Learn How To Stay Safe Online </p>
+</div>
+
+</div>
+ 
+</body>
+</html>

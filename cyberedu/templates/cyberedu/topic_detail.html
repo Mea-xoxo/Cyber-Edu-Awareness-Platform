@@ -1,0 +1,25 @@
+{% load static %}
+<!Doctype html>
+<html>
+<head>
+    <title> {{topic.title }}</title>
+    <link rel = "stylesheet" href = "{% static 'cyberedu/style.css' %}">
+</head> 
+<body class = 'Phishing'>
+    <div class  = 'topic-container'>
+
+    <!--Wrap topic in container-->
+   <h1>{{topic.title}} </h1>
+   <p>{{topic.content}}</p>
+    
+    <a href = "{% url 'quiz' topic.id %}">
+        <button> Take Quiz</button>
+        </a> <br> <br>
+
+
+<a href = "/" class = "back-btn"> Back To Topics</a>
+    </div>
+</body> 
+
+
+</html>

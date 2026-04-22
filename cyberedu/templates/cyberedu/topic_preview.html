@@ -1,0 +1,8 @@
+<h1> {{ topic.title }}</h1>
+<p>{{ topic.content|truncatewords:30 }}</p>
+
+<a href = "{% url 'topic_detail' topic.id %}"><button>Read Full Topic </button>
+</a>
+<br><br>
+
+<a href = "/">Back To Topics</a>

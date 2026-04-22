@@ -1,0 +1,253 @@
+body.home {
+    font-family: Arial, sans-serif;
+    background: url("/static/cyberedu/images/home.jpg") no-repeat center center fixed;
+    background-size: cover;
+    color: rgb(47, 107, 146);
+    text-align: center;
+    padding: 30px;
+    min-height: 100vh;
+}
+
+
+body.Phishing{
+    background:url('/static/cyberedu/images/bg2.jpg') no-repeat center center fixed;
+    background-position: center 280px;
+    background-size:50%;
+
+}
+/* TOPIC GRID */
+.topics {
+    display: block;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+    
+}
+    
+/* TOPICS SECTION */
+.topics-section {
+    margin-top: 20px;
+}
+
+/* CLICKABLE TITLE */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 15px 30px;
+
+    background: rgba(15, 23, 42, 0.6); /* transparent dark */
+    backdrop-filter: blur(10px);       /* glass effect */
+    -webkit-backdrop-filter: blur(10px);
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+ul{
+    float: left;
+    display:flex;
+    justify-content :center;
+    align-items:center;
+}
+
+ul li {
+    list-style : none;
+    margin-left:62px;
+    margin-top:27px;
+    font-size :14px;
+
+}
+ul li a:hover{
+    color:#df9019 
+}
+
+.logo { 
+    font-weight: bold;
+    color: #2563eb;
+}
+
+.container {
+    display : flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid rgb(160, 106, 106)
+}
+
+.nav-left{
+    display:flex;
+    gap:20px
+}
+
+.search {
+    display:flex;
+    gap:20px;
+
+}
+.srch {
+    font-family:"Times New Roman";
+    width:150px;
+    height:40px;
+    background:transparent;
+    border: 1px solid rgb(4, 12, 27)
+}
+.nav-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.nav-links a{
+    color: rgb(17, 73, 110);
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background: #00ff4c;
+    transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.dropdown {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+}
+.dropbtn{
+    padding: 10px;
+    text-decoration: none;
+    color:black;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 30px;
+    background: white;
+    min-width: 150px;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #374151;
+}
+.dropdown-content a:hover {
+    background: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.result-box {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.result-box h3 {
+    margin: 0;
+}
+
+
+
+.hero {
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hero h1{
+    color:white;
+    font-weight: bold 800px;
+    font-size: 52px;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.6)
+}
+
+
+/* BUTTON LINK */
+.start-btn {
+    display: inline-block;
+    margin-top: 10px;
+    color: #2563eb;
+    font-weight: bold;
+}
+h1{
+    color: #f7f9fd;
+
+}
+p{
+    font-size: 14px;
+    color:aqua
+}
+
+.back-btn{
+    color: rgb(41, 223, 223);
+    background-color:#111;
+    padding:10px 15px;
+    text-decoration:none;
+    border-radius:5px;
+    margin:20px auto;
+
+}
+
+.back-btn:hover{
+    background-color:#bbacac
+}
+
+.container{
+    max-width:800px;
+    margin:auto;
+    background: #e3e6ec;
+    padding:25px; 
+    border-radius: 12px;
+    box-shadow:0 10px 25px rgba(252, 242, 242, 0.4);
+}
+.search input {
+    padding: 6px 12px;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+}
+.topic-page {
+    background-image: url("/static/cyberedu/images/bg2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.topic-container {
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    backdrop-filter:blur(8px);
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 10px;
+    border:1px solid rgba(255,255,255,0.2);
+    text-align: center
+}

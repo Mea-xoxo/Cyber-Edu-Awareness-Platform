@@ -1,0 +1,21 @@
+<h2>Search Results</h2>
+{%if query %}
+    <p>You searched for '{{ query }}'</p>
+{% endif %}
+
+{% for topic in results %}
+<div>
+    <h3>{{topic.title }}</h3>
+    <p>{{ topic.content|truncatewords:5 }}</p>
+
+    <a href = '{% url 'topic_preview' topic.id %}'>
+        {{topic.title}}
+      
+    </a><br>
+</div>
+{% empty %}
+    <p>No topics found</p>
+{% endfor %}
+
+
+
